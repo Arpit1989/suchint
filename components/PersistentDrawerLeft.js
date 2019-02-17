@@ -209,7 +209,7 @@ class PersistentDrawerLeft extends React.Component {
             ))}
           </List>
         </Drawer>
-        <main
+        <main style={{padding:'0px'}}
           className={classNames(classes.content, {
             [classes.contentShift]: open,
           })}
