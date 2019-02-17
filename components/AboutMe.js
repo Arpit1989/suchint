@@ -21,6 +21,8 @@ import FavoriteIcon from '@material-ui/icons/Favorite';
 import ShareIcon from '@material-ui/icons/Share';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import MoreVertIcon from '@material-ui/icons/MoreVert';
+import KeyboardArrowDown from '@material-ui/icons/KeyboardArrowDown';
+
 import SimpleModal from './SimpleModal';
 
 class AboutMe extends React.Component {
@@ -56,18 +58,19 @@ class AboutMe extends React.Component {
         <Grid direction="row" justify="center" container spacing={32}>
             <Grid item xs={12}>
               <Card className={classes.card}>
-                <CardMedia
-                  className={classes.media}
-                  image="/static/images/suchint.jpg"
-                  title=""
-                  style={{backgroundSize:'cover',height:'30rem'}}
-                />
+                <div style={{height:'39.5rem',backgroundColor:'black'}}>
+                  <video muted style={{opacity:0.5,position:'relative',bottom:'6rem',width:'100%'}} autoPlay src='/static/videos/kumbh.mp4'></video>
+                </div>
                 <CardContent>
-                  <Typography component="p">
+                  <Typography style={{fontWeight:'600',color:'white',position:'absolute',top:'6rem',left:'4rem'}} component="h2" variant="h2">
+                    Kumbh 2019
+                  </Typography>
+                  <Typography style={{textAlign:'justify',width:'350px',color:'white',position:'absolute',top:'11rem',left:'4rem'}} component="h5" variant='h5'>
                     An artistic soul, expressing and exploring my life with various
   creative digital mediums, trying to imbibe nature through visuals and express
   through my creations.
                   </Typography>
+                    <Button onClick={this.handleExpandClick}  variant="contained" color="primary" className={classes.button}> About Me <KeyboardArrowDown className={classes.icon} /> </Button>
                 </CardContent>
                 <CardActions className={classes.actions} disableActionSpacing>
                   <IconButton aria-label="Add to favorites">
@@ -89,7 +92,7 @@ class AboutMe extends React.Component {
                 </CardActions>
                 <Collapse in={this.state.expanded} timeout="auto" unmountOnExit>
                   <CardContent>
-                    <Typography paragraph>
+                    <Typography align='justify' paragraph>
                       As a child, books were never my best friend, struggling with
                       contemporary school learning, eventually deciding on leaving behind weaknesses,
                       I started to dive in to the world of multimedia in my school years, and since then I
@@ -110,7 +113,7 @@ class AboutMe extends React.Component {
                       transformation mode.
 
                     </Typography>
-                    <Typography paragraph>
+                    <Typography align='justify' paragraph>
                       Mumbai was the next big step, it was like entering a war zone of cinema with
                       glamour and flashing lifestyle of Bollywood. Someone wise told me that a skilled
                       person with in-depth technical knowledge does not have to worry in life, as he will
@@ -124,7 +127,7 @@ class AboutMe extends React.Component {
                       made an infotainment show “Born to Remember” for All India Radio that went on
                       air for 365 days.
                     </Typography>
-                    <Typography paragraph>
+                    <Typography align='justify' paragraph>
                       For the love of camera and experimental cinema, I made well appreciated
                       Documentaries for Border Security Force and Sahitya Academy that telecasted
                       over many Film Festivals IGNCA New Delhi, Indian Habitat Centre, Raza
