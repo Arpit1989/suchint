@@ -58,7 +58,7 @@ class AboutMe extends React.Component {
         <Grid direction="row" justify="center" container spacing={32}>
             <Grid item xs={12}>
               <Card className={classes.card}>
-                <div style={{height:'39.5rem',backgroundColor:'black'}}>
+                <div style={{height:'28.5rem',backgroundColor:'black'}}>
                   <video muted style={{opacity:0.5,position:'relative',bottom:'6rem',width:'100%'}} autoPlay src='/static/videos/kumbh.mp4'></video>
                 </div>
                 <CardContent>
